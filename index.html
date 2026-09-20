@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CoreKPS — Digital Platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Core<span>KPS</span></div>
+    <button class="menu" onclick="toggleMenu()">☰</button>
+    <nav id="nav">
+      <a href="#home">Home</a>
+      <a href="#features">Features</a>
+      <a href="#plans">Plans</a>
+      <a href="#login">Login</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div>
+        <p class="eyebrow">COREKPS DIGITAL PLATFORM</p>
+        <h1>Manage your digital account in one place.</h1>
+        <p class="lead">A clean, mobile-friendly dashboard interface for accounts, plans, referrals and withdrawal requests.</p>
+        <div class="actions">
+          <a class="btn primary" href="#register">Create Account</a>
+          <a class="btn secondary" href="#login">Login</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="stat"><span>Account Balance</span><strong>$0.00</strong></div>
+        <div class="stat"><span>Available</span><strong>$0.00</strong></div>
+        <div class="stat"><span>Referral Members</span><strong>0</strong></div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <p class="eyebrow">FEATURES</p>
+      <h2>Everything in a simple dashboard</h2>
+      <div class="grid">
+        <article><b>👤 Account</b><p>Profile, security and account information.</p></article>
+        <article><b>📊 Dashboard</b><p>View balances, activity and account history.</p></article>
+        <article><b>👥 Referrals</b><p>Track your referral structure and activity.</p></article>
+        <article><b>💸 Withdrawals</b><p>Submit withdrawal requests when eligible.</p></article>
+      </div>
+    </section>
+
+    <section id="plans" class="section">
+      <p class="eyebrow">PLANS</p>
+      <h2>Transparent plan information</h2>
+      <div class="grid plans">
+        <article><h3>Starter</h3><p>Minimum: $10</p><button onclick="selectPlan('Starter')">Select</button></article>
+        <article><h3>Growth</h3><p>Custom amount</p><button onclick="selectPlan('Growth')">Select</button></article>
+        <article><h3>Professional</h3><p>Custom amount</p><button onclick="selectPlan('Professional')">Select</button></article>
+      </div>
+      <p class="note">Demo interface only. No deposits, investment transactions, guaranteed returns or real withdrawals are processed by this front-end.</p>
+    </section>
+
+    <section id="register" class="form-section">
+      <div class="form-card">
+        <p class="eyebrow">REGISTER</p>
+        <h2>Create your account</h2>
+        <form onsubmit="demoSubmit(event,'Registration')">
+          <input required placeholder="Full name">
+          <input required type="email" placeholder="Email">
+          <input required type="password" placeholder="Password">
+          <button class="btn primary" type="submit">Create Account</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="login" class="form-section">
+      <div class="form-card">
+        <p class="eyebrow">LOGIN</p>
+        <h2>Welcome back</h2>
+        <form onsubmit="demoSubmit(event,'Login')">
+          <input required type="email" placeholder="Email">
+          <input required type="password" placeholder="Password">
+          <button class="btn primary" type="submit">Login</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 CoreKPS · Demo frontend</footer>
+  <script src="script.js"></script>
+</body>
+</html>
